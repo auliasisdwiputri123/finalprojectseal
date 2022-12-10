@@ -113,6 +113,10 @@ $row = mysqli_fetch_array ($data);
 					<textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" required><?php echo $row['deskripsi'] ; ?></textarea>
 				</div>
 
+				<div class="form-group">
+					<label>Ganti file</label>
+					<input type="file" class="form-control" name="file_baru" id="file_baru">
+				</div>
 			
 
 			</form>

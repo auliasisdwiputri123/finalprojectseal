@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Des 2022 pada 07.32
+-- Waktu pembuatan: 10 Des 2022 pada 04.07
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.0.19
 
@@ -61,26 +61,29 @@ CREATE TABLE `buku` (
   `deleted` tinyint(1) NOT NULL,
   `cut_off` int(11) DEFAULT NULL,
   `inaktif` int(11) DEFAULT NULL,
-  `id_usul` varchar(20) DEFAULT NULL
+  `id_usul` varchar(20) DEFAULT NULL,
+  `file_baru` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `buku`
 --
 
-INSERT INTO `buku` (`id_ka`, `uraian_ka`, `id_skkad`, `id_na`, `id_kategori`, `uraian_jra`, `uraian_skkad`, `ket_skkad`, `deskripsi`, `deleted`, `cut_off`, `inaktif`, `id_usul`) VALUES
-('123', 'Surat tugas', 'PG-2', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', '2222222222222222222', 0, 1, 2, NULL),
-('12345', 'Surat tugas', 'PG-3', 'PN-2', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'mmmmmmmmmmmmmmmmmm', 0, 1, 2, NULL),
-('12345678', 'Surat tugas aaaaaaaaacccc', 'PG-4', 'PN-2', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jkl', 0, 1, 2, NULL),
-('123456789', 'Surat tugas fyfj', 'PG-3', 'PN-1', 'K-5', 'hhhh', 'hhh', 'hhhh', 'abcde', 0, 1, 2, NULL),
-('BU-10', 'Surat tugas aaaaaaaaab', 'PG-3', 'PN-2', 'K-5', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'abcf', 0, 1, 2, NULL),
-('BU-11', 'Surat tugas', 'PG-2', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jjjjjjjjjjjjjjjjjjjjjjjjjjj', 0, 1, 2, NULL),
-('BU-112', 'Surat tugas kominfo', 'PG-2', 'PN-2', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jjjjjjjjjjjjjjjjjjjjj', 0, 1, 2, NULL),
-('BU-21', 'Surat tugas fyfj', 'PG-1', 'PN-1', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'ghvjhvkjvkjkj', 0, NULL, NULL, NULL),
-('BU-22', 'Surat tugas 11', 'PG-2', 'PN-2', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'uuuuuuuuuuuuuuuuuuu', 0, 1, 2, NULL),
-('BU-6', 'Surat tugas', 'PG-1', 'PN-3', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'nnnnnnn', 0, 1, 2, 'K-1'),
-('BU-7', 'Surat tugas aul', 'PG-1', 'PN-1', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', ' ,mn;ln;lml', 0, 1, 2, NULL),
-('BU-9', 'Surat tugas hhh', 'PG-1', 'PN-2', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'nnnnnnnnnnnnnnnnn', 0, 1, 2, NULL);
+INSERT INTO `buku` (`id_ka`, `uraian_ka`, `id_skkad`, `id_na`, `id_kategori`, `uraian_jra`, `uraian_skkad`, `ket_skkad`, `deskripsi`, `deleted`, `cut_off`, `inaktif`, `id_usul`, `file_baru`) VALUES
+('12', 'Surat tugas aul', 'PG-4', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'hhhh', 'nnnnnnnnnnnnnnnn', 0, 1, 2, NULL, 'Surat Undangan Update Progres MSIB SEAL Batch 3.pdf'),
+('123', 'Surat tugas', 'PG-2', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', '2222222222222222222', 0, 1, 2, NULL, 'Surat Undangan Update Progres MSIB SEAL Batch 3.pdf'),
+('12345', 'Surat tugas', 'PG-3', 'PN-2', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'mmmmmmmmmmmmmmmmmm', 0, 1, 2, NULL, ''),
+('12345666666666666666', 'Surat tugas 11', 'PG-3', 'PN-1', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'kkkkkkkkkkkkkkkk', 0, 1, 2, NULL, 'squence-squence-tracking aduan.drawio.png'),
+('12345678', 'Surat tugas aaaaaaaaacccc', 'PG-4', 'PN-2', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jkl', 0, 1, 2, NULL, NULL),
+('123456789', 'Surat tugas fyfj', 'PG-3', 'PN-1', 'K-5', 'hhhh', 'hhh', 'hhhh', 'abcde', 0, 1, 2, NULL, NULL),
+('BU-10', 'Surat tugas aaaaaaaaab', 'PG-3', 'PN-2', 'K-5', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'abcf', 0, 1, 2, NULL, NULL),
+('BU-11', 'Surat tugas', 'PG-2', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jjjjjjjjjjjjjjjjjjjjjjjjjjj', 0, 1, 2, NULL, 'squence-squence posting aduan.drawio.png'),
+('BU-112', 'Surat tugas kominfo', 'PG-2', 'PN-2', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jjjjjjjjjjjjjjjjjjjjj', 0, 1, 2, NULL, NULL),
+('BU-21', 'Surat tugas fyfj', 'PG-1', 'PN-1', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'ghvjhvkjvkjkj', 0, NULL, NULL, NULL, NULL),
+('BU-22', 'Surat tugas 222222', 'PG-2', 'PN-2', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'uuuuuuuuuuuuuuuuuuu', 0, 1, 2, NULL, ''),
+('BU-6', 'Surat tugas 123', 'PG-1', 'PN-3', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'nnnnnnn', 0, 1, 2, 'K-1', NULL),
+('BU-7', 'Surat tugas aul', 'PG-1', 'PN-1', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', ' ,mn;ln;lml', 0, 1, 2, NULL, NULL),
+('BU-9', 'Surat tugas hhh', 'PG-1', 'PN-2', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'nnnnnnnnnnnnnnnnn', 0, 1, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 

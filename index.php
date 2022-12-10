@@ -224,7 +224,10 @@ require_once "config/database.php";
                     <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" required></textarea>
                   </div>
 
-                  
+                  <div class="form-group">
+                    <label>file</label>
+                    <input type="file" class="form-control" name="file_baru" id="file_baru" required>
+                  </div>
 
                 </div>
 
@@ -353,7 +356,7 @@ require_once "config/database.php";
             $("#cut_off").val('');
             $("#inaktif").val('');
             $("#deskripsi").val('');
-            $("#id_usul").val('');
+            $("#file_baru").val('');
             load_data();
           }
         });
@@ -397,7 +400,7 @@ require_once "config/database.php";
             $("#cut_off").val('');
             $("#inaktif").val('');
             $("#deskripsi").val('');
-            $("#id_usul").val('');
+            $("#file_baru").val('');
             load_data();
           }
         });

@@ -4,14 +4,15 @@ require_once "config/database.php";
 
 $data = mysqli_query($db, "SELECT * FROM buku INNER JOIN kategori ON kategori.id_kategori=buku.id_kategori INNER JOIN pergub ON pergub.id_skkad=buku.id_skkad INNER JOIN akhir_surat ON akhir_surat.id_na=buku.id_na  WHERE id_ka = '$_GET[id_ka]'");
 
-	// var_dump ($data);
-	// die();
-$row = mysqli_fetch_array ($data);
+// var_dump ($data);
+// die();
+$row = mysqli_fetch_array($data);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +27,7 @@ $row = mysqli_fetch_array ($data);
 	<link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -35,7 +37,7 @@ $row = mysqli_fetch_array ($data);
 					Kelola Arsip
 				</a>
 			</div>
-		</div> 
+		</div>
 	</nav>
 
 	<div class="container-fluid">
@@ -56,7 +58,10 @@ $row = mysqli_fetch_array ($data);
 					</div>
 					<div class="panel-body">
 						<div class="row">
-							
+							<div class="col-md-4 text-center">
+								<img src="assets/img/<?= $row['file_baru'] ?>" width="80%">
+							</div>
+
 							<div class="col-md-4">
 								<table class="table table-bordered table-striped">
 									<tr>
@@ -117,7 +122,8 @@ $row = mysqli_fetch_array ($data);
 								</table>
 							</div>
 						</div>
-						<a href="index.php" class="btn btn-primary"><< Kembali</a>
+						<a href="index.php" class="btn btn-primary">
+							<< Kembali</a>
 					</div>
 				</div>
 
@@ -134,4 +140,5 @@ $row = mysqli_fetch_array ($data);
 	</footer>
 
 </body>
+
 </html>
