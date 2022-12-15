@@ -13,7 +13,7 @@ $cut_off = $_POST['cut_off'];
 $inaktif = $_POST['inaktif'];
 $deskripsi = $_POST['deskripsi'];
 
-$ekstensi_diperbolehkan	= array('png','jpg','pdf');
+$ekstensi_diperbolehkan	= array('png','jpg');
 $file_baru = $_FILES['file_baru']['name'];
 $x = explode('.', $file_baru);
 $ekstensi = strtolower(end($x));

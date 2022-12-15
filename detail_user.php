@@ -32,7 +32,7 @@ $row = mysqli_fetch_array($data);
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="awal.php">
+				<a class="navbar-brand" href="awal_user.php">
 					<i class="glyphicon glyphicon-check"></i>
 					Kelola Arsip
 				</a>
@@ -122,7 +122,7 @@ $row = mysqli_fetch_array($data);
 								</table>
 							</div>
 						</div>
-						<a href="awal.php" class="btn btn-primary">
+						<a href="awal_user.php" class="btn btn-primary">
 							<< Kembali</a>
 					</div>
 				</div>
