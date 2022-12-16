@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Des 2022 pada 04.07
+-- Waktu pembuatan: 15 Des 2022 pada 17.44
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.0.19
 
@@ -70,18 +70,11 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id_ka`, `uraian_ka`, `id_skkad`, `id_na`, `id_kategori`, `uraian_jra`, `uraian_skkad`, `ket_skkad`, `deskripsi`, `deleted`, `cut_off`, `inaktif`, `id_usul`, `file_baru`) VALUES
-('12', 'Surat tugas aul', 'PG-4', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'hhhh', 'nnnnnnnnnnnnnnnn', 0, 1, 2, NULL, 'Surat Undangan Update Progres MSIB SEAL Batch 3.pdf'),
-('123', 'Surat tugas', 'PG-2', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', '2222222222222222222', 0, 1, 2, NULL, 'Surat Undangan Update Progres MSIB SEAL Batch 3.pdf'),
-('12345', 'Surat tugas', 'PG-3', 'PN-2', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'mmmmmmmmmmmmmmmmmm', 0, 1, 2, NULL, ''),
-('12345666666666666666', 'Surat tugas 11', 'PG-3', 'PN-1', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'kkkkkkkkkkkkkkkk', 0, 1, 2, NULL, 'squence-squence-tracking aduan.drawio.png'),
-('12345678', 'Surat tugas aaaaaaaaacccc', 'PG-4', 'PN-2', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jkl', 0, 1, 2, NULL, NULL),
+('12345678888', 'Surat tugas fyfj', 'PG-1', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jhjjjjjjjjjj', 0, 1, 2, NULL, 'Membuat Data Laporan.png'),
 ('123456789', 'Surat tugas fyfj', 'PG-3', 'PN-1', 'K-5', 'hhhh', 'hhh', 'hhhh', 'abcde', 0, 1, 2, NULL, NULL),
-('BU-10', 'Surat tugas aaaaaaaaab', 'PG-3', 'PN-2', 'K-5', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'abcf', 0, 1, 2, NULL, NULL),
-('BU-11', 'Surat tugas', 'PG-2', 'PN-1', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jjjjjjjjjjjjjjjjjjjjjjjjjjj', 0, 1, 2, NULL, 'squence-squence posting aduan.drawio.png'),
+('BU-10', 'Surat tugas aaaaaaaaab', 'PG-3', 'PN-2', 'K-5', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'abcf', 0, 1, 2, NULL, 'ho0tline pengaduan.jpg'),
 ('BU-112', 'Surat tugas kominfo', 'PG-2', 'PN-2', 'K-3', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'jjjjjjjjjjjjjjjjjjjjj', 0, 1, 2, NULL, NULL),
 ('BU-21', 'Surat tugas fyfj', 'PG-1', 'PN-1', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'ghvjhvkjvkjkj', 0, NULL, NULL, NULL, NULL),
-('BU-22', 'Surat tugas 222222', 'PG-2', 'PN-2', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'uuuuuuuuuuuuuuuuuuu', 0, 1, 2, NULL, ''),
-('BU-6', 'Surat tugas 123', 'PG-1', 'PN-3', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'nnnnnnn', 0, 1, 2, 'K-1', NULL),
 ('BU-7', 'Surat tugas aul', 'PG-1', 'PN-1', 'K-4', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', ' ,mn;ln;lml', 0, 1, 2, NULL, NULL),
 ('BU-9', 'Surat tugas hhh', 'PG-1', 'PN-2', 'K-1', 'nknlknlk', 'jkbnknlk', 'jkbkjnbkjn', 'nnnnnnnnnnnnnnnnn', 0, 1, 2, NULL, NULL);
 
@@ -129,6 +122,28 @@ INSERT INTO `pergub` (`id_skkad`, `skkad_pergub`, `deleted`) VALUES
 ('PG-3', 'R-Rahasia', 0),
 ('PG-4', 'SR-Sangat Rahasia', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `level` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id`, `nama`, `username`, `password`, `level`) VALUES
+(1, 'superadmin', 'superadmin', 'superadmin', 'superadmin'),
+(2, 'user', 'user', 'user', 'user');
+
 --
 -- Indexes for dumped tables
 --
@@ -159,6 +174,22 @@ ALTER TABLE `kategori`
 --
 ALTER TABLE `pergub`
   ADD PRIMARY KEY (`id_skkad`);
+
+--
+-- Indeks untuk tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
